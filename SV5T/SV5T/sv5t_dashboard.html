@@ -1,0 +1,245 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sinh viên 5 tốt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      /* Hiệu ứng cho các nút trong sidebar */
+      .sidebar-nav a {
+        transition: all 0.3s ease;
+      }
+      .sidebar-nav a:hover {
+        background-color: #ffffff;
+        color: #005BAC; /* Màu xanh dương đậm của Hội SVVN */
+        transform: scale(1.05);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar-nav a:active {
+        transform: scale(0.95); /* Hiệu ứng khi nhấn */
+      }
+      /* Hiệu ứng cho nút đăng xuất */
+      .logout-btn {
+        transition: all 0.3s ease;
+      }
+      .logout-btn:hover {
+        background-color: #ffffff;
+        color: #005BAC;
+        transform: translateX(5px);
+      }
+      /* Hiệu ứng cho các nút trong header */
+      .header-btn {
+        transition: all 0.3s ease;
+      }
+      .header-btn:hover {
+        background-color: #4dabf7; /* Màu xanh dương nhạt hơn khi hover */
+        transform: rotate(10deg) scale(1.1);
+      }
+      .header-btn:active {
+        transform: scale(0.9);
+      }
+      /* Hiệu ứng tìm kiếm */
+      .search-input {
+        transition: all 0.3s ease;
+      }
+      .search-input:focus {
+        width: 250px;
+        box-shadow: 0 0 10px rgba(0, 91, 172, 0.5); /* Bóng xanh dương */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <div class="bg-blue-500 text-white w-64 p-6 flex flex-col"> <!-- Đổi từ red-500 sang blue-900 -->
+        <div class="flex items-center mb-6">
+          <img
+            alt="User profile picture"
+            class="rounded-full w-12 h-12 mr-4"
+            height="50"
+            src="https://storage.googleapis.com/a1aa/image/0Tr-apdwhpAv9rhhF3yB25YiJvg1S0ud_qPm7hsqCjk.jpg"
+            width="50"
+          />
+          <div>
+            <div class="font-bold">Phạm Trần Minh Quang</div>
+            <div class="text-sm">MSSV: 2280813658</div>
+          </div>
+        </div>
+        <nav class="flex-1 sidebar-nav">
+          <ul>
+            <li class="mb-4">
+              <a
+                class="flex items-center p-2 bg-white text-blue-900 rounded-md" 
+                href="#"
+              >
+                <i class="fas fa-home mr-3"></i>
+                Tổng quan
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center p-2" href="#">
+                <i class="fas fa-user mr-3"></i>
+                Thông tin sinh viên
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center p-2" href="#">
+                <i class="fas fa-file-alt mr-3"></i>
+                Hồ sơ sinh viên 5 tốt
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center p-2" href="#">
+                <i class="fas fa-tasks mr-3"></i>
+                Task Categories
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center p-2" href="#">
+                <i class="fas fa-cog mr-3"></i>
+                Cài đặt
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="flex items-center p-2" href="#">
+                <i class="fas fa-question-circle mr-3"></i>
+                Hỗ trợ
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a class="flex items-center p-2 logout-btn" href="#">
+            <i class="fas fa-sign-out-alt mr-3"></i>
+            Đăng xuất
+          </a>
+        </div>
+      </div>
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header
+          class="bg-gray-200 text-white p-4 flex justify-between items-center"
+        >
+          <div class="text-lg font-bold">SV5T Dashboard</div>
+          <div class="flex items-center">
+            <input
+              class="p-2 rounded-md text-black search-input"
+              placeholder="Search your task here..."
+              type="text"
+            />
+            <button class="ml-2 p-2 bg-blue-900 rounded-md header-btn"> <!-- Đổi từ red-500 sang blue-900 -->
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="ml-2 p-2 bg-blue-900 rounded-md header-btn">
+              <i class="fas fa-bell"></i>
+            </button>
+            <button class="ml-2 p-2 bg-blue-900 rounded-md header-btn">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="ml-4">Saturday 08/03/2025</div>
+          </div>
+        </header>
+        <!-- Welcome Message -->
+        <div class="p-6">
+          <h1 class="text-2xl font-bold mb-4">
+            Chào mừng Minh Quang
+            <span class="wave">👋</span>
+          </h1>
+          <!-- Task List -->
+          <div class="bg-white p-6 rounded-md shadow-md">
+            <h2 class="text-xl font-bold mb-4">Thông tin về Đoàn Hội</h2>
+            <div class="space-y-4">
+              <!-- Task Item -->
+              <div class="p-4 bg-gray-100 rounded-md flex items-center">
+                <div class="flex-1">
+                  <h3 class="font-bold">
+                    XÉT CHỌN DANH HIỆU SINH VIÊN 5 TỐT CẤP TRUNG ƯƠNG VÀ GIẢI
+                    THƯỞNG SAO THÁNG GIÊNG NĂM HỌC 2023 - 2024
+                  </h3>
+                  <p>
+                    Buy gifts on the way and pick up cake from the bakery. (6 PM
+                    | Fresh Elements)
+                  </p>
+                  <div class="text-sm text-gray-500">Priority: Moderate</div>
+                  <div class="text-sm text-blue-900">Status: Not Started</div> <!-- Đổi từ red-500 sang blue-900 -->
+                  <div class="text-sm text-gray-500">
+                    Created on: 20/09/2023
+                  </div>
+                </div>
+                <img
+                  alt="Task related image"
+                  class="w-24 h-24 rounded-md ml-4"
+                  height="100"
+                  src="https://storage.googleapis.com/a1aa/image/6T0vSlkVFzxTIfvgr0f8xcXByEqf5xYgQoJFC8H7xHw.jpg"
+                  width="100"
+                />
+              </div>
+              <!-- Task Item -->
+              <div class="p-4 bg-gray-100 rounded-md flex items-center">
+                <div class="flex-1">
+                  <h3 class="font-bold">
+                    XÉT CHỌN DANH HIỆU SINH VIÊN 5 TỐT CẤP TRUNG ƯƠNG VÀ GIẢI
+                    THƯỞNG SAO THÁNG GIÊNG NĂM HỌC 2023 - 2024
+                  </h3>
+                  <p>
+                    Buy gifts on the way and pick up cake from the bakery. (6 PM
+                    | Fresh Elements)
+                  </p>
+                  <div class="text-sm text-gray-500">Priority: Moderate</div>
+                  <div class="text-sm text-blue-900">Status: Not Started</div>
+                  <div class="text-sm text-gray-500">
+                    Created on: 20/09/2023
+                  </div>
+                </div>
+                <img
+                  alt="Task related image"
+                  class="w-24 h-24 rounded-md ml-4"
+                  height="100"
+                  src="https://storage.googleapis.com/a1aa/image/6T0vSlkVFzxTIfvgr0f8xcXByEqf5xYgQoJFC8H7xHw.jpg"
+                  width="100"
+                />
+              </div>
+              <!-- Task Item -->
+              <div class="p-4 bg-gray-100 rounded-md flex items-center">
+                <div class="flex-1">
+                  <h3 class="font-bold">
+                    XÉT CHỌN DANH HIỆU SINH VIÊN 5 TỐT CẤP TRUNG ƯƠNG VÀ GIẢI
+                    THƯỞNG SAO THÁNG GIÊNG NĂM HỌC 2023 - 2024
+                  </h3>
+                  <p>
+                    Buy gifts on the way and pick up cake from the bakery. (6 PM
+                    | Fresh Elements)
+                  </p>
+                  <div class="text-sm text-gray-500">Priority: Moderate</div>
+                  <div class="text-sm text-blue-900">Status: Not Started</div>
+                  <div class="text-sm text-gray-500">
+                    Created on: 20/09/2023
+                  </div>
+                </div>
+                <img
+                  alt="Task related image"
+                  class="w-24 h-24 rounded-md ml-4"
+                  height="100"
+                  src="https://storage.googleapis.com/a1aa/image/6T0vSlkVFzxTIfvgr0f8xcXByEqf5xYgQoJFC8H7xHw.jpg"
+                  width="100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
